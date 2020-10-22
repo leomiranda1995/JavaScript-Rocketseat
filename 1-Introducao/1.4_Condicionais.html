@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Condicionais</title>
+    </head>
+    <body>
+        <script>
+            // if else
+            function podeVotar(idade){
+                if (idade > 18 && idade < 65){
+                    return 'Pode votar';
+                } else if (idade < 16){
+                    return 'Não pode votar';
+                } else {
+                    return 'Voto Facultativo';
+                }
+            }
+            var fulanoVota = podeVotar(17);
+            console.log(fulanoVota);
+
+            // switch case
+            function retornaSexo(sexo){
+                switch (sexo){
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+        </script>        
+    </body>
+</html>

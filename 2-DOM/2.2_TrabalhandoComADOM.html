@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalhando com a DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome" />
+            <button class="botao">Adicionar</button>
+        </div>
+        
+        <script>
+            // Trabalhando com a DOM
+            var pegaElementoPelaID = document.getElementById('nome');
+            
+            var pegaElementosPelaTagArray = document.getElementsByTagName('input');
+            var pegaElementosPelaTag = document.getElementsByTagName('input')[0];
+
+            var pegaElementosPelaClassArray = document.getElementsByClassName('nome');
+            var pegaElementosPelaClass = document.getElementsByClassName('nome')[0];
+
+            var pegaElemntoQuerySelector = document.querySelector('div#app input');
+            var pegaElemntoQuerySelectorPorPropriedade = document.querySelector('input[name=nome');
+
+            var pegaElemntosQuerySelectorAll = document.querySelectorAll('input');
+
+            console.log(pegaElemntoQuerySelectorPorPropriedade);
+
+            // Exemplo
+            var inputElement = document.querySelector('input.nome');
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function() {
+                var text = inputElement.value;
+                alert(`Botao clicado ${text}`);
+            }
+        </script>        
+    </body>
+</html>
